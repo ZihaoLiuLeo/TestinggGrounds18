@@ -13,11 +13,14 @@ UCLASS()
 class TESTINGGROUNDS_API UChooseNextWayPoint : public UBTTaskNode
 {
 	GENERATED_BODY()
-	
-	virtual EBTNodeResult::Type ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory);
-	
+
+		virtual EBTNodeResult::Type ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory);
+
 protected:
 	UPROPERTY(EditAnywhere, Category = "Blackboard")
 		struct FBlackboardKeySelector IndexKey;
-	
+
+	UPROPERTY(EditAnywhere, Category = "Blackboard")
+		struct FBlackboardKeySelector WaypointKey;
+
 };
